@@ -2,7 +2,6 @@ const Ad = require("../models/Ad");
 
 class AdController {
   async index(req, res) {
-    1;
     /* aplicação dos filtros */
     const filters = {};
 
