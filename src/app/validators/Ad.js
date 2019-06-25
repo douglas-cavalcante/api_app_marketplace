@@ -1,4 +1,4 @@
-const Joi = require("joi");
+const Joi = require('joi')
 
 module.exports = {
   body: {
@@ -6,4 +6,4 @@ module.exports = {
     description: Joi.string().required(),
     price: Joi.number().required()
   }
-};
+}
