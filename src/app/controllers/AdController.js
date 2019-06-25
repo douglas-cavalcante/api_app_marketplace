@@ -46,14 +46,14 @@ class AdController {
   }
 
   async update (req, res) {
-    const ad = await Ad.findByIdAndUpdate(req.params.id, req.body, {
+    const ad = await Ad.findOneAndUpdate(req.params.id, req.body, {
       new: true
     })
     return res.json(ad)
   }
 
   async destroy (req, res) {
-    await Ad.findByIdAndDelete(req.params.id)
+    await Ad.findOneAndDelete(req.params.id)
     return res.send()
   }
 }
